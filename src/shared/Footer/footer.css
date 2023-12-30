@@ -1,0 +1,30 @@
+
+
+.footer{
+    bottom: 10;
+    background-color: black;
+}
+
+ul{
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-list{
+    display: inline-block;
+    margin:auto;
+    padding: 20px;
+    color: white;
+    font-family: 'Courier',sans-serif;
+    list-style-type: none;
+}
+
+.title {
+    /* margin-top: -15px; */
+    display: inline-block;
+    font-family: 'Days One', sans-serif;
+    font-size: 26px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
