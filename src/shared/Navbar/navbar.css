@@ -6,8 +6,7 @@ body {
   .topnavbar {
     overflow: hidden;
     background-color: #333;
-    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-  }
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);}
   
   .topnavbar a {
     float: left;
@@ -20,7 +19,7 @@ body {
   }
   
   .topnavbar a:hover {
-    background-color: #ddd;
+    background-color:cyan;
     color: black;
   }
   
@@ -29,6 +28,17 @@ body {
       color: black;
       text-align: center;
       
+  }
+  .topnavbar input[type=text] {
+    float: left;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+  .topnavbar input[type=text] {
+    border: none solid #ccc;
   }
   
   .topnavbar a.active {
