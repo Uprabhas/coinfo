@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+*{
+  font-family: 'Luxurious Roman', serif;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -6,23 +11,27 @@ body {
   .topnavbar {
     overflow: hidden;
     background-color: #333;
-    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);}
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  }
   
   .topnavbar a {
     float: left;
     color: black;
-    
     text-align: right;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
   }
   
-  .topnavbar a:hover {
-    background-color:cyan;
-    color: black;
-  }
+  /* .topnavbar a:hover {
+    background-color:rgb(71, 74, 74);
+    color: rgb(255, 255, 255);
+  } */
   
+.titlename{
+  font-size: 25px;
+}
+
   .topnavbar a.split{
       float: right;
       color: black;
@@ -30,7 +39,8 @@ body {
       
   }
   .topnavbar input[type=text] {
-    float: left;
+    border-radius: 6px;
+    float: right;
     padding: 6px;
     border: none;
     margin-top: 8px;
@@ -42,7 +52,7 @@ body {
   }
   
   .topnavbar a.active {
-    background-color: #04AA6D;
-    color: white;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    color: rgb(12, 12, 12);
   }
   

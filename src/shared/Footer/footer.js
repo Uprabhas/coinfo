@@ -8,7 +8,7 @@ export default function Footer() {
     <ul>
         <li className="footer-list" routerLink=""><a className="title"><label for="" style={{cursor: "pointer;"}}>Coin</label><label style={{color: "red",cursor:" pointer" }}for="">fo</label></a></li>
         
-        <li className="footer-list">Developed by Prabhas utla</li>
+        <li className="footer-list">Developed by Maddy's</li>
         <li className="footer-list">Copyright © 2023 Coinfo.to. All Rights Reserved</li>
         <li className="footer-list">
             <div>
