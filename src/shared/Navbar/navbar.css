@@ -2,6 +2,15 @@
 *{
   font-family: 'Luxurious Roman', serif;
 }
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
+.banner-text{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 4.5rem;
+  color: white;
+  text-align: left;
+  margin-left: 1rem;
+  text-shadow: -9px 5px 8px black;
+}
 
 body {
     margin: 0;
@@ -11,7 +20,7 @@ body {
   .topnavbar {
     overflow: hidden;
     background-color: #333;
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   }
   
   .topnavbar a {
@@ -23,16 +32,17 @@ body {
     font-size: 17px;
   }
   
-  /* .topnavbar a:hover {
-    background-color:rgb(71, 74, 74);
+  .topnavbar a:hover {
+    background-color:white;
     color: rgb(255, 255, 255);
-  } */
+    border-radius: 7px;
+  }
   
 .titlename{
   font-size: 25px;
 }
 
-  .topnavbar a.split{
+.topnavbar a.split{
       float: right;
       color: black;
       text-align: center;
@@ -52,7 +62,43 @@ body {
   }
   
   .topnavbar a.active {
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    background-image: linear-gradient(to right, #6a11cb 0%);
     color: rgb(12, 12, 12);
   }
+
+
+  .topleft{
+    width: 50%;
+    height: 50vh;
+  }
+
+  .topright{
+    width: 50%;
+    height: 40vh;
+  }
+
+  /* .maintext{
+    font-family: ;
+  } */
+
+.flex-justify{
+  justify-content: center;
+}
+/* .flex-item{
+} */
+
+.flex{
+  display: flex;
+}
+.min-height{
+  min-height: 20rem;
+}
+
+.background{
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   
+}
+
+.blur{
+  filter: blur(4px);
+}

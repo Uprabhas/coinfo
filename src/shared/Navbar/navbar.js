@@ -13,15 +13,29 @@ export default function Navbar() {
             fo
           </label>
         </a>
-        <Link class="active" to="/"><i class="fa fa-home"> Home</i></Link>
-        <Link class="split " to="/login">
+        <Link class="active" to="/">
+          <i class="fa fa-home"> Home</i>
+        </Link>
+        <Link class="split" to="/login">
           <i class="fa fa-user"></i> Log In
         </Link>
-        <a class="split">
-          <i class="fa fa-heart"></i> Watchlist
-        </a>
+        <Link class="split">
+          <i class="fa fa-heart" to="/"></i> Watchlist
+        </Link>
         <input type="text" placeholder="Search... Madcoin"></input>
       </div>
+      {/* <div>
+        <section class="min-height  flex background">
+          <div class="topleft">
+            <h1 class="main_text banner-text">
+              Welcome to Coinfo where you find info about Crypto...
+            </h1>
+          </div>
+          <div class="topright ">
+            <img src="public\coinfo_main_section.png"></img>
+          </div>
+        </section>
+      </div> */}
     </div>
   );
 }
