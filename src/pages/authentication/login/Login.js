@@ -3,11 +3,6 @@ import './loginmain.css';
 
 export default function Login() {
   return (
-<<<<<<< HEAD
-    <div>
-      <header>login</header>
-    </div>
-=======
     <div class="body">
       <div class="wrapper">
         <h1>
@@ -36,6 +31,5 @@ export default function Login() {
 
     
 
->>>>>>> e4c22240a6b505ac39602a7d1a68ee509f6218b4
   )
 }
