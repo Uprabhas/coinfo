@@ -17,6 +17,11 @@ ul{
     color: white;
     font-family: 'Courier',sans-serif;
     list-style-type: none;
+
+}
+
+.footer-list:hover{
+    text-decoration:underline;
 }
 
 .title {
