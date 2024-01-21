@@ -4,6 +4,7 @@ import Footer from "./shared/Footer/footer";
 import Home from "./pages/Home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/authentication/login/Login";
+import Registration from "./pages/authentication/Registration/Registration";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" Component={Home}/>
           <Route path="/login" Component={Login}/>
+          <Route path="/registration" Component={Registration}/>
         </Routes>
         <Footer />
       </div>
