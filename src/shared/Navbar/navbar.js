@@ -15,7 +15,10 @@ export default function Navbar() {
         </a>
         <Link class="active" to="/">
           <i class="fa fa-home"> Home</i>
-        </Link>
+        </Link>        
+        <div className="animated-text">
+          Fetch:<span></span>
+        </div>
         <Link class="split" to="/login">
           <i class="fa fa-user"></i> Log In
         </Link>
@@ -24,6 +27,7 @@ export default function Navbar() {
         </Link>
         <input type="text" placeholder="Search... Madcoin"></input>
       </div>
+
       {/* <div>
         <section class="min-height  flex background">
           <div class="topleft">
@@ -36,6 +40,8 @@ export default function Navbar() {
           </div>
         </section>
       </div> */}
+
     </div>
+    
   );
 }

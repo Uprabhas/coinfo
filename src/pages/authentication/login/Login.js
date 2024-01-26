@@ -1,5 +1,6 @@
 import React from 'react';
 import './loginmain.css';
+import { FaCircleUser, FaLock } from "react-icons/fa6";
 
 export default function Login() {
   return (
@@ -9,20 +10,19 @@ export default function Login() {
           Login
         </h1>
         <form action=''>
-          <div class="inputbox">
-            <input type='text' placeholder='  Username' required></input>
-            <i class="  fa fa-user-circle  logicon" aria-hidden="true"></i>
-
+          <div className="inputbox">
+            <input type='text' placeholder='  Username' required/>
+            <FaCircleUser className='icon'/>
           </div>
-          <div class="inputbox">
-            <input type ="password" placeholder='  password' required></input>
-            <i class="  fa fa-lock logicon " aria-hidden="true"></i>
+          <div className="inputbox">
+            <input type ="password" placeholder='  password '  required  />
+            <FaLock className='icon' />
 
           </div>
           <button class="loginbutton" type='submit'> Login</button>
-          <p>
+          <span className='signup'><p>
             don't have account?<a href='#'>sign up
-          </a></p>
+          </a></p></span>
         </form>
 
       </div>
