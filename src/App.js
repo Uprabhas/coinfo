@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/authentication/login/Login";
 import Watchlist from "./pages/Watchlist/Watchlist";
+import Registration from "./pages/authentication/Registration/Registration"
+
 function App() {
   return (
     <Router>
@@ -18,6 +20,7 @@ function App() {
           <Route path="/" Component={Home}/>
           <Route path="/login" Component={Login}/>
           <Route path="/watchlist" Component={Watchlist}/>
+          <Route path="/reg" Component={Registration}/>
         </Routes>
         <Footer />
       </div>

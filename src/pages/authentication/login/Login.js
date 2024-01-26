@@ -1,5 +1,6 @@
 import React from 'react';
 import './loginmain.css';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   return (
@@ -16,13 +17,13 @@ export default function Login() {
           </div>
           <div class="inputbox">
             <input type ="password" placeholder='  password' required></input>
-            <i class="  fa fa-lock logicon " aria-hidden="true"></i>
+            <i class="fa fa-lock logicon " aria-hidden="true"></i>
 
           </div>
           <button class="loginbutton" type='submit'> Login</button>
           <p>
-            don't have account?<a href='#'>sign up
-          </a></p>
+            don't have account?<Link to="/reg">sign up
+          </Link></p>
         </form>
       </div>
     </div>
