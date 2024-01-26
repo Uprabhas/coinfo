@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./home.css";
-
-
-// const getdata =()=>{
-// return fetch()
-// }
-// fetch('', options)
-//     .then((response) => response.json())
-//     .then((result) => console.log(result));
+import { api_coinlist_url ,api_options} from "../../services/Apiservice";
 
 export default function Home() {
+
+const getdata =async()=>{
+  const res=await fetch(api_coinlist_url, {
+    options:api_options
+  }
+  );
+const data=await res.json()
+console.log(data)
+}
+
+useEffect(() => {
+  getdata();
+}, [])
+
   return (
     <div className="container header">
       {/* header */}
@@ -27,7 +34,7 @@ export default function Home() {
           {/* coin-view */}
           <div className="row">
             <div className="col-md-12">
-              <p className="coin m-2">
+              <p className="coin m-2" onClick={getdata}>
                 <span className="icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
