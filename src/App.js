@@ -4,7 +4,7 @@ import Footer from "./shared/Footer/footer";
 import Home from "./pages/Home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/authentication/login/Login";
-
+import Watchlist from "./pages/Watchlist/Watchlist";
 function App() {
   return (
     <Router>
@@ -17,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" Component={Home}/>
           <Route path="/login" Component={Login}/>
+          <Route path="/watchlist" Component={watchlist}/>
         </Routes>
         <Footer />
       </div>

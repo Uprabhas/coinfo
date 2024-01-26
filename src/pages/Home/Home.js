@@ -47,7 +47,6 @@ export default function Home() {
           <div className="col-md-6">
             <h2 className="title"> Cryptocurrency prices and signals</h2>
           </div>
-          <div className="col-md-6"></div>
         </div>
       </div>
       {/* section */}

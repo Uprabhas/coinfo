@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <div>
-      <div class="topnavbar">
+      <div class="topnavbar" >
         <a className="titlename">
-          <label for="" style={{ cursor: "pointer;" }}>
+          <label for="" style={{ color: "white", cursor: "pointer;" }}>
             Coin
           </label>
           <label style={{ color: "red", cursor: " pointer" }} for="">
@@ -14,18 +14,16 @@ export default function Navbar() {
           </label>
         </a>
         <Link class="active" to="/">
-          <i class="fa fa-home"> Home</i>
+          <i  class="  flex flex-justify flex-item fa fa-home"> Home</i>
         </Link>        
-        <div className="animated-text">
-          Fetch:<span></span>
-        </div>
         <Link class="split" to="/login">
           <i class="fa fa-user"></i> Log In
         </Link>
-        <Link class="split">
-          <i class="fa fa-heart" to="/"></i> Watchlist
+        <Link class="split" to="/watchlist">
+          <i class="fa fa-heart"></i> Watchlist
         </Link>
         <input type="text" placeholder="Search... Madcoin"></input>
+
       </div>
 
       {/* <div>
