@@ -1,0 +1,13 @@
+.body{
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.card{
+    border: 1px soild black;
+    width: 50vw;
+}
+
+.submit{
+    text-decoration: none;
+    color: black;
+}
