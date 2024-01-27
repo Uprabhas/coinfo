@@ -28,13 +28,14 @@ useEffect(() => {
           <div className="col-md-6"></div>
         </div>
       </div>
+      <hr/>
       {/* section */}
       <section className="m-2">
         <div className=" main">
           {/* coin-view */}
           <div className="row">
             <div className="col-md-12">
-              <p className="coin m-2" onClick={getdata}>
+              <p className="coin m-2" >
                 <span className="icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +53,7 @@ useEffect(() => {
             </div>
           </div>
         </div>
-        <hr/>
+    
       </section>
     </div>
   );
