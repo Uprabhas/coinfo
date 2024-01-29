@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/authentication/login/Login";
 import Watchlist from "./pages/Watchlist/Watchlist";
 import Registration from "./pages/authentication/Registration/Registration"
+import Coindetail from "./pages/Coinmodel/coin-detail/Coindetail";
+
+
 
 function App() {
   return (
@@ -21,6 +24,7 @@ function App() {
           <Route path="/login" Component={Login}/>
           <Route path="/watchlist" Component={Watchlist}/>
           <Route path="/reg" Component={Registration}/>
+          <Route path={"/"+item.uuid} Component={Coindetail}/>
         </Routes>
         <Footer />
       </div>
