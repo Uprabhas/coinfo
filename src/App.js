@@ -10,6 +10,7 @@ import Coindetail from "./pages/Coinmodel/coin-detail/Coindetail";
 
 
 
+
 function App() {
   return (
     <Router>
@@ -24,7 +25,7 @@ function App() {
           <Route path="/login" Component={Login}/>
           <Route path="/watchlist" Component={Watchlist}/>
           <Route path="/reg" Component={Registration}/>
-          <Route path={"/"+item.uuid} Component={Coindetail}/>
+          <Route path='/:id' Component={Coindetail}/>
         </Routes>
         <Footer />
       </div>

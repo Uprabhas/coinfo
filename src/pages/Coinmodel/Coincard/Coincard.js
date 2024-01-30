@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Coindetail from '../coin-detail/Coindetail'
 
 export default function Coincard({data}) {
-    const api_data = data
+    // const api_data = data
   return (
     <div>
          {data.map((item, index) => (
         <section className="box m-2" key={index} >
-          <Link to={"/"+item.uuid}>
+          <Link to={`/:${item.uuid}`}>
           <div className=" main ">
             {/* coin-view */}
             <div className="row">

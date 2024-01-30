@@ -2,12 +2,11 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import "./home.css";
 import { api_coinlist_url, api_options } from "../../services/Apiservice";
-
 import Coincard from "../Coinmodel/Coincard/Coincard";
 
 export default function Home() {
   const [cryptoData, setcryptoData] = useState([]);
-
+ 
   const getdata = async () => {
     const res = await fetch(api_coinlist_url, {
       options: api_options,
