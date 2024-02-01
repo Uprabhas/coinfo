@@ -17,12 +17,13 @@
 }
 
 .box{
-border-radius: 8px;
+    border-radius: 8px;
     border: 1px solid black;
 }
 
 .main{
     margin-left: 50px;
+    text-decoration-line: none;
 }
 
 .coin-header{
@@ -34,6 +35,7 @@ border-radius: 8px;
     display: flex;
     text-align: center;
     align-items: center;
+    text-decoration-line: none;
 }
 
 .coin{

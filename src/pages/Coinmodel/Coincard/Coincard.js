@@ -1,15 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import Coindetail from '../coin-detail/Coindetail'
+import { Link,} from 'react-router-dom'
+import './coincard.css'
 
 export default function Coincard({data}) {
     // const api_data = data
+
   return (
     <div>
          {data.map((item, index) => (
         <section className="box m-2" key={index} >
-          <Link to={`/:${item.uuid}`}>
-          <div className=" main ">
+          <Link className='navlink' to={`/${item.uuid}`} >
+          <div className="main">
             {/* coin-view */}
             <div className="row">
               <div className="col-md-1 common">{item?.rank}</div>
@@ -20,9 +21,9 @@ export default function Coincard({data}) {
                   </span>
                 </p>
                 <div>
-                  <label className="">{item?.name}</label>
-                </div>
+                  <label className="">{item?.name}</label><br/>
                 <label className="">{item?.symbol}</label>
+                </div>
               </div>
               <div className="col-md-3 common">₹{item?.marketCap}</div>
               <div className="col-md-3 common">₹{item?.price}</div>

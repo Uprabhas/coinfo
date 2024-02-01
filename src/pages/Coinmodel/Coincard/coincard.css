@@ -1,0 +1,10 @@
+.main{
+    text-decoration: none;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.navlink{
+    color: rgb(12, 11, 11);
+    text-decoration: none;
+}
+
