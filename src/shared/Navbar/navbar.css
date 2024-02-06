@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
 *{
   font-family: 'Luxurious Roman', serif;
+  
 }
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
 .banner-text{
@@ -22,6 +23,8 @@ body {
     background-color: #333;
     background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
     height: 3.38rem;
+    border : 1px solid black;
+    
   }
   
   .topnavbar a {

@@ -7,9 +7,13 @@
 
 .wrapper{
     width: 23rem;
-    height: 25rem;
+    height: 28rem;
     align-items: center;
     border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    
+
     
 }
 
@@ -18,17 +22,25 @@
     text-align: center;
     color: aliceblue;
     text-shadow: -9px 5px 8px black;
-    margin: 1rem;
+    margin: 2rem;
 
 }
 
-.body{
+
+
+.bg{
     height: 50rem;
-    background-color: seagreen;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../../../../public/images/1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
+
 
 .inputbox{
     display: flex;
@@ -75,14 +87,22 @@
     margin-bottom: 25px;
     color: aliceblue;
     box-shadow:-8px 5px 8px rgba(0, 0, 0, 0.526) ;
-
 }
 
-.signup{
-    color: aliceblue;
+/* .signup{
+    color: white;
     font-size: 1rem;
-}
+} */
+
 p{
     margin-left: 100px;
     color: white;
+}
+
+p:hover{
+    text-decoration: underline;
+}
+
+.signup-margin{
+    margin-left: 0.5rem;
 }

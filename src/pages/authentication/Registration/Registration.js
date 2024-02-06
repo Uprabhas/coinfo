@@ -4,12 +4,12 @@ import "./reg.css";
 
 export default function Registration() {
   return (
-    <div className="body">
+    <div className="reg-body">
       <div className="card">
+        <h1 className="signup-text">Signup</h1>
         <div className="card-body">
           <form>
             <div className="row">
-              <div className="col-md-6">
                 <label for="Prabhas" class="form-label">
                   Name
                 </label>
@@ -18,9 +18,9 @@ export default function Registration() {
                   class="form-control"
                 />
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6 mob-no" >
                 <label for="9999999999" class="form-label">
-                  Moblie No.
+                  Moblie No.  
                 </label>
                 <input
                   type="number"
@@ -37,11 +37,11 @@ export default function Registration() {
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
                 />
-                <div id="emailHelp" class="form-text">
+                <div id="emailHelp" class="form-text white-text">
                   We'll never share your email with anyone else.
                 </div>
-              </div>
-              <div class="mb-3">
+              
+              <div class="mb-3 ">
                 <label for="exampleInputPassword1" class="form-label">
                   Password
                 </label>
@@ -51,20 +51,20 @@ export default function Registration() {
                   id="exampleInputPassword1"
                 />
               </div>
-              <div class="mb-3 form-check">
+              <div class="mb-3 form-check check-me-out">
                 <input
                   type="checkbox"
                   class="form-check-input"
                   id="exampleCheck1"
                 />
-                <label class="form-check-label" for="exampleCheck1">
+                <label class="form-check-label " for="exampleCheck1">
                   Check me out
                 </label>
               </div>
             </div>
 
-            <button type="submit" class="btn btn-primary">
-              <Link to="/" className="submit">
+            <button type="submit" class="btn btn-primary reg-submit-button ">
+              <Link to="/">
                 Submit
               </Link>
             </button>

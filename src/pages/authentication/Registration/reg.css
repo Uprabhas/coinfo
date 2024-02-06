@@ -1,13 +1,75 @@
-.body{
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+.reg-body{
+    height: 45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../../public/images/1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.signup-text{
+    color: white;
+    margin-left: 8rem;
+    margin-top: 1rem;
+    text-shadow: -9px 5px 8px black;
+
 }
 
 .card{
-    border: 1px soild black;
-    width: 50vw;
+    border-radius: 1rem;
+    background: transparent;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    
+}
+.card input{
+    border-radius: 20px;
+    border: solid white 2px;
+    
 }
 
-.submit{
-    text-decoration: none;
-    color: black;
+
+.card form{
+    color: white;
+    text-shadow: -9px 5px 8px black;
+
+}
+.card input{
+    background: transparent;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.white-text{
+    color: white;
+}
+.card-body{
+    backdrop-filter: blur(10%);
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width: 23rem;
+    height: 32rem;
+}
+
+.mob-no{
+    width: 18.8rem;
+}
+
+
+.reg-submit-button{
+    margin-left: 8rem;
+    background: transparent;
+    border-radius: 20px;
+    border: solid white 2px;
+    width: 6rem;
+    
+}
+
+.reg-submit-button a{
+    color: white;
 }
