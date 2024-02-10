@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { api_options, base_URL } from "../../../services/Apiservice";
 import "./coindetail.css";
+import Chart from 'chart.js/auto';
 import { Line } from "react-chartjs-2";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import {CategoryScale} from 'chart.js'; 
+
 
 export default function Coindetail() {
   const [coindatail, setcoindatail] = useState([]);
@@ -28,7 +31,6 @@ export default function Coindetail() {
   }, []);
 
   const labels = ["January", "February", "March", "April", "May", "June"];
-
   const data = {
     labels: labels,
     datasets: [
@@ -58,8 +60,8 @@ export default function Coindetail() {
               <label className="pt-1">{coindatail?.symbol}</label>
             </div>
           </div>
-          <div className="col-md-2 bold m-4">
-            <h5>${coindatail.price}</h5>
+          <div className="col-md-2 bold m-4 pt-2">
+            <h5>${coindatail?.price}</h5>
           </div>
         </div>
         <section>
@@ -72,26 +74,27 @@ export default function Coindetail() {
           </div>
 
           <div className="row">
-            <Card className="c-info col-md-6 m-2" sx={{ maxWidth: 600 }}>
-              <h4 className="m-2">Coin Info</h4>
-              <CardContent>
-                <Typography variant="body2" color="text.secondary">
-                  price to USD  ${coindatail.price}
+            <Card className="c-info col-md-6 m-2 " sx={{ maxWidth: 600 }}>
+              
+              <h3 className="m-2">Value statistics</h3>
+              <CardContent className="">
+                <Typography variant="body2 row" color=" text.secondary">
+                  <label className=" col-sm-6 text-start mt-1">price to USD</label><div className=" col-sm-6 text-end">${coindatail?.price}</div>
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  coin Rank #{coindatail.rank}
+                <Typography variant="body2 row" color=" text.secondary">
+                <label className="col-sm-6 text-start mt-1">coin Rank</label><div className="text-end col-sm-6"> #{coindatail.rank}</div>
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                 price to {coindatail.symbol} {coindatail.btcPrice} {coindatail.symbol}
+                <Typography variant="body2 row" color=" text.secondary">
+                <label className="col-sm-5 text-start mt-1">price to {coindatail.symbol}</label> <div className="col-sm-6 text-end"></div> {coindatail.btcPrice} {coindatail.symbol}
                 </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                  Market cap${coindatail.marketCap}
+                <Typography variant="body2 row" color=" text.secondary">
+                <label className="col-sm-6 text-start mt-1">Market cap</label> <div className="col-sm-6 text-end">${coindatail.marketCap}</div>
                 </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                Fully diluted market cap ${coindatail.fullyDilutedMarketCap}
+                <Typography variant="body2 row" color=" text.secondary">
+                <label className="col-sm-6 text-start mt-1">Fully diluted market cap</label> <div className="col-sm-6 text-end">${coindatail.fullyDilutedMarketCap}</div>
                 </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                {/* All-time high ${coindatail.allTimeHigh.price} */}
+                <Typography variant="body2 row" color=" text.secondary">
+                <label className="col-sm-6 text-start mt-1">All-time high</label> <div className="col-sm-6 text-end">${coindatail?.allTimeHigh?.price}</div>
                 </Typography>
               </CardContent>
             </Card>
@@ -99,16 +102,18 @@ export default function Coindetail() {
               <h4 className="m-2">Coin supply</h4>
               <CardContent>
                 <Typography
-                  sx={{ fontSize: 14 }}
-                  color="text.secondary"
+                variant="body2 row"
+                  color=" text.secondary"
                   gutterBottom
                 >
-                  Word of the Day
+                  <label className="col-sm-6">Circulating</label><div className="col-sm-6">${coindatail?.supply?.circulating}</div>
                 </Typography>
-                <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                  adjective
+                <Typography variant="body2 row" sx={{ mb: 1.5 }} color=" text.secondary">
+                <label className="col-sm-6">Total Market</label> <div className="col-sm-6">${coindatail?.supply?.total}</div>
                 </Typography>
-                
+                <Typography variant="body2 row" sx={{ mb: 1.5 }} color=" text.secondary">
+                <label className="col-sm-6">Max</label> <div className="col-sm-6">${coindatail?.supply?.max}</div>
+                </Typography>
               </CardContent>
             </Card>
           </div>
