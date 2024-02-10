@@ -99,9 +99,9 @@ p{
     color: white;
 }
 
-p:hover{
+/* p:hover{
     text-decoration: underline;
-}
+} */
 
 .signup-margin{
     margin-left: 0.5rem;

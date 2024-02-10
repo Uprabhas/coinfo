@@ -7,6 +7,7 @@ import Login from "./pages/authentication/login/Login";
 import Watchlist from "./pages/Watchlist/Watchlist";
 import Registration from "./pages/authentication/Registration/Registration"
 import Coindetail from "./pages/Coinmodel/coin-detail/Coindetail";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
 

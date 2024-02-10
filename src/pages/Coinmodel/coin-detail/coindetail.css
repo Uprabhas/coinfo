@@ -1,0 +1,22 @@
+.title{
+    margin:22px
+}
+
+.sym{
+    /* font-size: 5rem; */
+}
+/* .c-chart{
+    max-width: 90vw;
+    height: 45vh;
+} */
+
+.bold{
+    font-weight: bolder;
+    text-decoration-style: none;
+}
+
+.c-info{
+    flex: 0 0 48% !important;
+    width: 48%;
+    
+}

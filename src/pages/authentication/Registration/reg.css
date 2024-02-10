@@ -9,15 +9,9 @@
     background-size: cover;
 }
 
-.signup-text{
-    color: white;
-    margin-left: 8rem;
-    margin-top: 1rem;
-    text-shadow: -9px 5px 8px black;
-
-}
-
 .card{
+
+    width: 35%;
     border-radius: 1rem;
     background: transparent;
     border-radius: 20px;
@@ -25,6 +19,21 @@
     backdrop-filter: blur(15px);
     
 }
+
+.reg-submit-button a{
+    text-decoration: none;
+    color: white;
+}
+
+/* .signup-text{
+    color: white;
+    margin-left: 8rem;
+    margin-top: 1rem;
+    text-shadow: -9px 5px 8px black;
+
+}
+
+
 .card input{
     border-radius: 20px;
     border: solid white 2px;
@@ -33,7 +42,7 @@
 
 
 .card form{
-    color: white;
+    color: rgb(19, 18, 18);
     text-shadow: -9px 5px 8px black;
 
 }
@@ -45,14 +54,14 @@
 
 
 .white-text{
-    color: white;
+    color: rgb(10, 10, 10);
 }
 .card-body{
     backdrop-filter: blur(10%);
     display: flex;
     justify-self: center;
     align-items: center;
-    width: 23rem;
+    width: 43rem;
     height: 32rem;
 }
 
@@ -70,6 +79,4 @@
     
 }
 
-.reg-submit-button a{
-    color: white;
-}
+ */

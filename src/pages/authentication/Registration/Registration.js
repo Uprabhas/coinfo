@@ -6,7 +6,7 @@ export default function Registration() {
   return (
     <div className="reg-body">
       <div className="card">
-        <h1 className="signup-text">Signup</h1>
+        <h1 className="signup-text text-center">Signup</h1>
         <div className="card-body">
           <form>
             <div className="row">
@@ -63,7 +63,7 @@ export default function Registration() {
               </div>
             </div>
 
-            <button type="submit" class="btn btn-primary reg-submit-button ">
+            <button type="submit" class="btn btn-primary reg-submit-button text-center ">
               <Link to="/">
                 Submit
               </Link>
