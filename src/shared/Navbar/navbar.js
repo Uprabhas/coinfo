@@ -6,7 +6,7 @@ export default function Navbar() {
     <div>
       <div class="topnavbar" >
         <a className="titlename">
-          <label for="" style={{ color: "white", cursor: "pointer;" }}>
+          <label for="" style={{ color: "black", cursor: "pointer;" }}>
             Coin
           </label>
           <label style={{ color: "red", cursor: " pointer" }} for="">
@@ -22,7 +22,6 @@ export default function Navbar() {
         <Link class="split" to="/watchlist">
           <i class="fa fa-heart"></i> Watchlist
         </Link>
-        <input type="text" placeholder="Search... Madcoin"></input>
 
       </div>
 

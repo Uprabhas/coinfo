@@ -14,6 +14,13 @@
     font-weight: bolder;
     text-decoration-style: none;
 }
+.b-name{
+    font-size: 20px;
+}
+.b-value{
+    font-size: 20px;
+    font-weight: bolder;
+}
 
 .c-info{
     flex: 0 0 48% !important;
