@@ -8,12 +8,14 @@ import Watchlist from "./pages/Watchlist/Watchlist";
 import Registration from "./pages/authentication/Registration/Registration"
 import Coindetail from "./pages/Coinmodel/coin-detail/Coindetail";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { GlobalProvider } from "./Context/context1";
 
 
 
 
 function App() {
   return (
+    <GlobalProvider>
     <Router>
       <div className="App">
         <link
@@ -31,6 +33,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </GlobalProvider>
   );
 }
 

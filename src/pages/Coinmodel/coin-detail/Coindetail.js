@@ -1,22 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext,useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { api_options, base_URL } from "../../../services/Apiservice";
 import "./coindetail.css";
-import Chart from "chart.js/auto";
 import { Line } from "react-chartjs-2";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { CategoryScale } from "chart.js";
+import {GlobalContext} from '../../../Context/context1'
+
 
 export default function Coindetail() {
-  const [coindatail, setcoindatail] = useState([]);
 
+  const {
+    addcointowatchlist,watchlist
+  }=useContext(GlobalContext)
+
+  let stordcoins = watchlist.find(val=>val.id===coindatail.id);
+  const savebtndisabled = stordcoins?true:false;
+
+  const [coindatail, setcoindatail] = useState([]);
   const { id } = useParams();
   
-
   const getdata = async () => {
     const res = await fetch(base_URL + "/coin/" + id, {
       options: api_options,
@@ -27,17 +31,16 @@ export default function Coindetail() {
   };
 
   useEffect(() => {
+
     getdata();
+    // eslint-disable-next-line
   }, []);
+
   const chartratio = [];
   const coindatailSparkline = coindatail?.sparkline ?? []; // Use an empty array if coindatail or sparkline is undefined
-  
   coindatailSparkline.forEach(element => {
     chartratio.push(element);
   });
-
- 
-  
   const labels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
   const data = {
     labels: labels,
@@ -75,6 +78,9 @@ export default function Coindetail() {
           </div>
           <div className="col-md-2 bold m-4 pt-2">
             <h5>${coindatail?.price}</h5>
+          </div>
+          <div className="col-md-2 bold m-4 pt-2">
+          <button type="button" class="btn btn-secondary" disabled={savebtndisabled} onClick={()=>addcointowatchlist(coindatail)} >save</button>
           </div>
         </div>
         <section>
