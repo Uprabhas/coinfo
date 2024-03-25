@@ -25,7 +25,7 @@ export const GlobalProvider = (props)=>{
 
 return(
     <GlobalContext.Provider value={{watchlist:state.watchlist,addcointowatchlist}}>
-        {props.childern}
+        {props.children}
     </GlobalContext.Provider>
 )
 }

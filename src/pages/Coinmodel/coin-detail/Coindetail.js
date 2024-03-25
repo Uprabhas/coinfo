@@ -7,54 +7,51 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import {GlobalContext} from '../../../Context/context1'
+import {CategoryScale} from 'chart.js'; 
+Chart.register(CategoryScale);
+import Chart from 'chart.js/auto';
 
 
 export default function Coindetail() {
 
-  const {
-    addcointowatchlist,watchlist
-  }=useContext(GlobalContext)
+  const { addcointowatchlist, watchlist } = useContext(GlobalContext);
 
-  let stordcoins = watchlist.find(val=>val.id===coindatail.id);
-  const savebtndisabled = stordcoins?true:false;
-
-  const [coindatail, setcoindatail] = useState([]);
   const { id } = useParams();
-  
-  const getdata = async () => {
-    const res = await fetch(base_URL + "/coin/" + id, {
-      options: api_options,
-    });
-    const data = await res.json();
-    setcoindatail(data.data.coin);
-    console.log(data.data.coin);
-  };
+  const [coindatail, setcoindatail] = useState({}); // Initialize with an object
 
   useEffect(() => {
+    const getdata = async () => {
+      try {
+        const res = await fetch(`${base_URL}/coin/${id}`, {
+          options: api_options,
+        });
+        const data = await res.json();
+        setcoindatail(data.data.coin);
+        console.log(data.data.coin);
+      } catch (error) {
+        console.error("Error fetching coin data:", error);
+      }
+    };
 
     getdata();
-    // eslint-disable-next-line
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id]); // Add id to dependencies array to re-fetch data when id changes
 
-  const chartratio = [];
-  const coindatailSparkline = coindatail?.sparkline ?? []; // Use an empty array if coindatail or sparkline is undefined
-  coindatailSparkline.forEach(element => {
-    chartratio.push(element);
-  });
-  const labels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
+  const stordcoins = watchlist.find(val => val.id === coindatail.id);
+  const savebtndisabled = stordcoins ? true : false;
+
+  const chartratio = coindatail?.sparkline ?? [];
+  const labels = Array.from({ length: chartratio.length }, (_, i) => i + 1); // Dynamically generate labels based on chartratio length
   const data = {
     labels: labels,
     datasets: [
       {
-        label: coindatail?.name ?? '', // Use an empty string if coindatail or name is undefined
+        label: coindatail?.name ?? '',
         backgroundColor: "rgb(255, 186, 3)",
         borderColor: "rgb(255, 99, 132)",
         data: chartratio,
       },
     ],
-    options: {
-      responsive:true,
-    }
   };
   
   
