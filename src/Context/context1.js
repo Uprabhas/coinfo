@@ -2,6 +2,7 @@ import React,{ createContext,useReducer,useEffect } from "react";
 import AppReducer from'./AppReducer'
 
 
+
 //inital state
 
 const initialstate = {
@@ -23,13 +24,12 @@ export const GlobalProvider = (props)=>{
     const addcointowatchlist = (coindata)=>{
         dispatch({type:'Add_coin',payload:coindata})
     }
-    // const removefromwatchlist = (id) => {
-    //     watchlist = watchlist.filter(coin => coin.uuid !== id);
-    //     return watchlist;
-    // };
+    const removefromwatchlist = (id) => {
+        dispatch({type:'remove_from _watchlist',payload:id})
+    };
 
 return(
-    <GlobalContext.Provider value={{watchlist:state.watchlist,addcointowatchlist,}}>
+    <GlobalContext.Provider value={{watchlist:state.watchlist,addcointowatchlist,removefromwatchlist}}>
         {props.children}
     </GlobalContext.Provider>
 )
