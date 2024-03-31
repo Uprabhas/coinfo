@@ -3,8 +3,9 @@ import AppReducer from'./AppReducer'
 
 
 //inital state
+
 const initialstate = {
-    watchlist:[]
+    watchlist:localStorage.getItem('watchlist')?JSON.parse(localStorage.getItem('watchlist')):[]
 }
 
 //create context
@@ -22,9 +23,13 @@ export const GlobalProvider = (props)=>{
     const addcointowatchlist = (coindata)=>{
         dispatch({type:'Add_coin',payload:coindata})
     }
+    // const removefromwatchlist = (id) => {
+    //     watchlist = watchlist.filter(coin => coin.uuid !== id);
+    //     return watchlist;
+    // };
 
 return(
-    <GlobalContext.Provider value={{watchlist:state.watchlist,addcointowatchlist}}>
+    <GlobalContext.Provider value={{watchlist:state.watchlist,addcointowatchlist,}}>
         {props.children}
     </GlobalContext.Provider>
 )

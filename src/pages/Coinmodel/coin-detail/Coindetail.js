@@ -8,8 +8,8 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import {GlobalContext} from '../../../Context/context1'
 import {CategoryScale} from 'chart.js'; 
-Chart.register(CategoryScale);
 import Chart from 'chart.js/auto';
+Chart.register(CategoryScale);
 
 
 export default function Coindetail() {
@@ -18,6 +18,8 @@ export default function Coindetail() {
 
   const { id } = useParams();
   const [coindatail, setcoindatail] = useState({}); // Initialize with an object
+  let stordcoins = watchlist.find(val => val.uuid === coindatail.uuid);
+  const savebtndisabled = stordcoins ? true : false;
 
   useEffect(() => {
     const getdata = async () => {
@@ -35,10 +37,8 @@ export default function Coindetail() {
 
     getdata();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id]); // Add id to dependencies array to re-fetch data when id changes
+  }, [id]); 
 
-  const stordcoins = watchlist.find(val => val.id === coindatail.id);
-  const savebtndisabled = stordcoins ? true : false;
 
   const chartratio = coindatail?.sparkline ?? [];
   const labels = Array.from({ length: chartratio.length }, (_, i) => i + 1); // Dynamically generate labels based on chartratio length
