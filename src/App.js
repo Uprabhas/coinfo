@@ -9,6 +9,7 @@ import Registration from "./pages/authentication/Registration/Registration"
 import Coindetail from "./pages/Coinmodel/coin-detail/Coindetail";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { GlobalProvider } from "./Context/context1";
+import  Currencyconvert  from "./pages/currency-master/currency-convert/currencyconvert"
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/watchlist" Component={Watchlist}/>
           <Route path="/reg" Component={Registration}/>
           <Route path='/:id' Component={Coindetail}/>
+          <Route path='/currency' Component={Currencyconvert}/>
         </Routes>
         <Footer />
       </div>

@@ -25,9 +25,8 @@ export default function Coincard({data}) {
                 <label className="">{item?.symbol}</label>
                 </div>
               </div>
-              <div className="col-md-3 common">₹{item?.marketCap}</div>
-              <div className="col-md-3 common">₹{item?.price}</div>
-              <div className="col-md-2 common"></div>
+              <div className="col-md-4 pt-3 text-center">${item?.price}</div>
+              <div className="col-md-4 pt-3 text-center">${item?.marketCap}</div>
             </div>
           </div>
           </Link>

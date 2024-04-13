@@ -40,15 +40,15 @@ export default function Home() {
         <div className="col-md-2">
           <label>icon</label>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-4 text-center">
           <label>price</label>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-4 text-center">
           <label>marketCap</label>
         </div>
-        <div className="col-md-2">
+        {/* <div className="col-md-2">
           <label>24</label>
-        </div>
+        </div> */}
       </div>
       {cryptoData &&<Coincard data={cryptoData}/>}
     </div>
